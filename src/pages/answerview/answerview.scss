@@ -1,0 +1,51 @@
+page-answerview {
+
+    span{
+        color: white;
+        font-size: 25px;
+    }
+
+    .card-background-page {
+
+        background-color: color($colors, light-background);
+        text-align: center;
+        
+        ion-card {
+            background: #fff;
+            border-radius: 2px;
+            display: inline-block;
+            height: 310px;
+            margin: 1rem;
+            position: relative;
+            width: 290px;
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+
+        .img-set {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            max-height: 240px;
+            width: 90%;
+            margin-left: 5%;
+        }
+    
+        .card-title {
+            position: absolute;
+            top: 1.5%;
+            font-size: 4.0em;
+            width: 100%;
+            font-weight: bold;
+            color: black;
+        }
+    
+        .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color:black;
+        }
+        
+    }
+}

@@ -1,0 +1,21 @@
+page-pain-view {
+    
+    .backgroundSetter{
+        background-color: color($colors, light-background);
+    }
+    h2 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    span{
+        color: white;
+        font-size: 25px;
+    }
+
+    .painImage {
+        size: 50%;
+        margin: 0px auto;
+        display: block;
+    }
+}

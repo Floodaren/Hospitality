@@ -1,0 +1,37 @@
+page-bodyview {
+
+    .backgroundSetter{
+        background-color: color($colors, light-background);
+    }
+
+    .listClass{
+        margin-right: 10%;
+        margin-left: 10%;
+
+        h2{
+            font-size: 40px;
+        }
+    }
+   
+    #categoryItem
+    {
+        text-align: center;
+        font-size: 200%;
+    }
+
+    span{
+        color: white;
+        font-size: 25px;
+    }
+
+    #menuButton
+    {
+        display: block;
+        margin: auto;       
+    }
+    
+    #subCategory
+    {
+        font-size: 80%;
+    }
+}

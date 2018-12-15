@@ -1,0 +1,51 @@
+<ion-header no-border>
+    <ion-navbar transparent padding>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <span>Svara</span>
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="this.callHelp()">
+         <span><ion-icon name="megaphone"></ion-icon></span>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="card-background-page">
+    <h1 class="infoText">Med hjälp av denna sida kan du svara på frågor</h1>
+    <hr class="whiteLine">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card (click)="answer('yes')">
+          <img class="img-set" src="./assets/imgs/yes.png"/>
+          <div class="card-title">Ja</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="answer('no')">
+          <img class="img-set" src="./assets/imgs/no.png"/>
+          <div class="card-title">Nej</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-card (click)="answer('maybe')">
+          <img class="img-set" src="./assets/imgs/maybe.png"/>
+          <div class="card-title">Kanske</div>
+        </ion-card>
+      </ion-col>
+      <ion-col col-6>
+        <ion-card (click)="answer('ok')">
+          <img class="img-set" src="./assets/imgs/ok.png"/>
+          <div class="card-title">Okej</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
+</ion-content>

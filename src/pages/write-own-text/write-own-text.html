@@ -1,0 +1,45 @@
+<ion-header no-border>
+  <ion-navbar transparent padding>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span>Fritext</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="this.callHelp()">
+        <span>
+          <ion-icon name="megaphone"></ion-icon>
+        </span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="backgroundSetter">
+  <h1 class="infoText">Förmedla det du vill få sagt genom fritext</h1>
+  <hr class="whiteLine">
+  <ion-list *ngFor="let item of messageArray.slice().reverse()">
+    <div *ngIf="messageArray.length > 0">
+      <button ion-button icon-only (click)="deleteMessages(item)" class="emptyButton" color="danger">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </div>
+    <ion-item class="messageClass" text-wrap>
+      <h2 class="messageText">{{item}}</h2>
+    </ion-item>
+  </ion-list>
+  <ion-grid bottom>
+    <ion-row class="textInputAndSendButton">
+      <ion-col col-10>
+        <ion-item class="inputField">
+          <ion-input type="text" [(ngModel)]="messageToArray" placeholder="Skriv text..."></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button round (click)="this.sendMessage()" id="sendButton">Skicka</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

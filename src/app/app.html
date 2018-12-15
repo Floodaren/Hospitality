@@ -1,0 +1,32 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar color="darker-green">
+      <ion-title>
+        <h3 class="angleHeader">
+          <ion-icon name="medkit"></ion-icon>&nbsp;Hospitality
+          <ion-icon name="pulse"></ion-icon>
+        </h3>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list no-lines>
+      <button menuClose class="biggerButtonClass" [class.highlight]="p.active" ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
+        {{p.title}}
+      </button>
+      <hr id="settingMenuLine">
+    </ion-list>
+    <div class="settings">
+      <h4 id="settingsLabel">Inställningar</h4>
+      <ion-item>
+        <ion-label>Ljud</ion-label>
+        <ion-toggle checked="true" [(ngModel)]="soundOrNotVar" (click)="soundOrNot()"></ion-toggle>
+      </ion-item>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

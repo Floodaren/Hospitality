@@ -1,0 +1,30 @@
+<ion-header no-border>
+    <ion-navbar transparent padding>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <span>Kroppen</span>
+        <div *ngIf="selectedItem">
+          <span id="subCategory">{{pageTitle}}</span>
+        </div>
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="this.callHelp()">
+         <span><ion-icon name="megaphone"></ion-icon></span>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content class="backgroundSetter">
+    <hr class="whiteLine">
+  <ion-list class="listClass">
+    <button ion-item *ngFor="let item of items" id="categoryItem" (press)="itemTapped($event, item)" (click)="itemTapped($event, item)">
+      <h2>{{item.title}}</h2>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" >
+      <button id="menuButton" ion-button secondary menuToggle>Meny</button>
+  </div>
+</ion-content>

@@ -1,0 +1,24 @@
+page-show-list-item {
+    .backgroundSetter{
+        background-color: color($colors, light-background);
+    }
+
+    span{
+        color: white;
+        font-size: 25px;
+    }
+
+    #menuButton
+    {
+        display: block;
+        margin: auto;       
+    }
+    
+    h1
+    {
+        color: white;
+        font-size: 100px;
+        text-align: center;
+        margin-top: 21%;
+    }
+}

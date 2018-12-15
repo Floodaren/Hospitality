@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-navbar transparent padding>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span>Smärta</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="this.callHelp()">
+        <span>
+          <ion-icon name="megaphone"></ion-icon>
+        </span>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="backgroundSetter">
+  <h1 class="infoText">Vart har du ont?</h1>
+  <hr class="whiteLine">
+  <img class="painImage" src="{{picturePath}}"></ion-content>
