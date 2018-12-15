@@ -589,11 +589,11 @@ var map = {
 		3
 	],
 	"../pages/show-list-item/show-list-item.module": [
-		289,
+		288,
 		2
 	],
 	"../pages/want-to-know-view/want-to-know-view.module": [
-		288,
+		289,
 		1
 	],
 	"../pages/write-own-text/write-own-text.module": [
@@ -817,8 +817,8 @@ var AppModule = (function () {
                         { loadChildren: '../pages/kids-view/kids-view.module#KidsViewPageModule', name: 'KidsViewPage', segment: 'kids-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/need-view/need-view.module#NeedViewPageModule', name: 'NeedViewPage', segment: 'need-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pain-view/pain-view.module#PainViewPageModule', name: 'PainViewPage', segment: 'pain-view', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/want-to-know-view/want-to-know-view.module#WantToKnowViewPageModule', name: 'WantToKnowViewPage', segment: 'want-to-know-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/show-list-item/show-list-item.module#ShowListItemPageModule', name: 'ShowListItemPage', segment: 'show-list-item', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/want-to-know-view/want-to-know-view.module#WantToKnowViewPageModule', name: 'WantToKnowViewPage', segment: 'want-to-know-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/write-own-text/write-own-text.module#WriteOwnTextPageModule', name: 'WriteOwnTextPage', segment: 'write-own-text', priority: 'low', defaultHistory: [] }
                     ]
                 }),
