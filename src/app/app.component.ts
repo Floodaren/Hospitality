@@ -14,7 +14,6 @@ import { KidsViewPage } from '../pages/kids-view/kids-view';
 import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
 import { Subject } from 'rxjs/Subject';
 
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -47,7 +46,6 @@ export class MyApp {
 
   }
   
-
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

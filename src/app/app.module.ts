@@ -19,6 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlarmSoundProvider } from '../providers/alarm-sound/alarm-sound';
 import { CategoryItemsProvider } from '../providers/category-items/category-items';
 import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
+import { TranslationsProvider } from '../providers/translations/translations';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
   ],
   imports: [
     BrowserModule,
+    PipesModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -59,6 +62,7 @@ import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
     PainViewPage,
     AnswerviewPage,
     SoundOrNotProvider,
+    TranslationsProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
