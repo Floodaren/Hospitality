@@ -29,7 +29,6 @@ export class TranslationsProvider {
     constructor() {}
 
     translate(value: string): string {
-        console.log('translate called with value ' + value + ' and language ' + this.language);
         if ( this.dictionary[this.language] != null) {
             return this.dictionary[this.language].values[value];
         }
