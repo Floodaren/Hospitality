@@ -74,7 +74,7 @@ var AnswerviewPage = (function () {
     };
     AnswerviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-answerview',template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/answerview/answerview.html"*/`<ion-header no-border>\n    <ion-navbar transparent padding>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>\n        <span>Svara</span>\n      </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="this.callHelp()">\n         <span><ion-icon name="megaphone"></ion-icon></span>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="card-background-page">\n    <h1 class="infoText">Med hjälp av denna sida kan du svara på frågor</h1>\n    <hr class="whiteLine">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'yes\')">\n          <img class="img-set" src="./assets/imgs/yes.png"/>\n          <div class="card-title">Ja</div>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'no\')">\n          <img class="img-set" src="./assets/imgs/no.png"/>\n          <div class="card-title">Nej</div>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'maybe\')">\n          <img class="img-set" src="./assets/imgs/maybe.png"/>\n          <div class="card-title">Kanske</div>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'ok\')">\n          <img class="img-set" src="./assets/imgs/ok.png"/>\n          <div class="card-title">Okej</div>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->\n</ion-content>\n`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/answerview/answerview.html"*/,
+            selector: 'page-answerview',template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/answerview/answerview.html"*/`<ion-header no-border>\n    <ion-navbar transparent padding>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>\n        <span>Svara</span>\n      </ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only (click)="this.callHelp()">\n         <span><ion-icon name="megaphone"></ion-icon></span>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content class="card-background-page">\n    <h1 class="infoText">{{\'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS\' | translate}}</h1>\n    <hr class="whiteLine">\n  <ion-grid>\n    <ion-row>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'yes\')">\n          <img class="img-set" src="./assets/imgs/yes.png"/>\n          <div class="card-title">Ja</div>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'no\')">\n          <img class="img-set" src="./assets/imgs/no.png"/>\n          <div class="card-title">Nej</div>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'maybe\')">\n          <img class="img-set" src="./assets/imgs/maybe.png"/>\n          <div class="card-title">Kanske</div>\n        </ion-card>\n      </ion-col>\n      <ion-col col-6>\n        <ion-card (click)="answer(\'ok\')">\n          <img class="img-set" src="./assets/imgs/ok.png"/>\n          <div class="card-title">Okej</div>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->\n</ion-content>\n`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/answerview/answerview.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_alarm_sound_alarm_sound__["a" /* AlarmSoundProvider */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_audio__["a" /* NativeAudio */], __WEBPACK_IMPORTED_MODULE_4__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */]])
     ], AnswerviewPage);
@@ -569,35 +569,35 @@ webpackEmptyAsyncContext.id = 122;
 
 var map = {
 	"../pages/answerview/answerview.module": [
-		283,
+		286,
 		7
 	],
 	"../pages/bodyview/bodyview.module": [
-		284,
+		287,
 		6
 	],
 	"../pages/kids-view/kids-view.module": [
-		285,
+		288,
 		5
 	],
 	"../pages/need-view/need-view.module": [
-		286,
+		289,
 		4
 	],
 	"../pages/pain-view/pain-view.module": [
-		287,
+		290,
 		3
 	],
 	"../pages/show-list-item/show-list-item.module": [
-		288,
+		291,
 		2
 	],
 	"../pages/want-to-know-view/want-to-know-view.module": [
-		289,
+		292,
 		1
 	],
 	"../pages/write-own-text/write-own-text.module": [
-		290,
+		293,
 		0
 	]
 };
@@ -732,9 +732,68 @@ var HomePage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export TranslationSet */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TranslationsProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TranslationSet = (function () {
+    function TranslationSet() {
+        this.values = {};
+    }
+    return TranslationSet;
+}());
+
+var TranslationsProvider = (function () {
+    function TranslationsProvider() {
+        this.languages = ['swe', 'eng'];
+        this.language = 'swe';
+        this.dictionary = {
+            'swe': {
+                language: 'swe',
+                values: {
+                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'Med hjälp av denna sida kan du svara på frågor'
+                }
+            },
+            'eng': {
+                language: 'eng',
+                values: {
+                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'With the help of this page you can answer questions'
+                }
+            }
+        };
+    }
+    TranslationsProvider.prototype.translate = function (value) {
+        if (this.dictionary[this.language] != null) {
+            return this.dictionary[this.language].values[value];
+        }
+    };
+    TranslationsProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], TranslationsProvider);
+    return TranslationsProvider;
+}());
+
+//# sourceMappingURL=translations.js.map
+
+/***/ }),
+
+/***/ 208:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(232);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -742,7 +801,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -751,7 +810,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_native_audio__ = __webpack_require__(82);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_write_own_text_write_own_text__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_pain_view_pain_view__ = __webpack_require__(108);
@@ -766,12 +825,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_alarm_sound_alarm_sound__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_category_items_category_items__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_sound_or_not_sound_or_not__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_translations_translations__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pipes_pipes_module__ = __webpack_require__(284);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -810,6 +873,7 @@ var AppModule = (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_20__pipes_pipes_module__["a" /* PipesModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/answerview/answerview.module#AnswerviewPageModule', name: 'AnswerviewPage', segment: 'answerview', priority: 'low', defaultHistory: [] },
@@ -845,6 +909,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__pages_pain_view_pain_view__["a" /* PainViewPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_answerview_answerview__["a" /* AnswerviewPage */],
                 __WEBPACK_IMPORTED_MODULE_18__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */],
+                __WEBPACK_IMPORTED_MODULE_19__providers_translations_translations__["a" /* TranslationsProvider */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
             ]
         })
@@ -856,7 +921,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 282:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -899,7 +964,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen, SoundOrNotProvider) {
-        var _this = this;
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
@@ -907,7 +971,18 @@ var MyApp = (function () {
         this.soundOrNotVar = true;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         this.activePage = new __WEBPACK_IMPORTED_MODULE_12_rxjs_Subject__["Subject"]();
-        this.initializeApp();
+    }
+    MyApp.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activePageSubScriber = this.activePage.subscribe(function (selectedPage) {
+            _this.pages.map(function (page) {
+                page.active = page.title === selectedPage.title;
+            });
+        });
+        this.platform.ready().then(function () {
+            _this.statusBar.styleDefault();
+            _this.splashScreen.hide();
+        });
         this.pages = [
             { title: 'Hem', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home', active: true },
             { title: 'Svara', component: __WEBPACK_IMPORTED_MODULE_7__pages_answerview_answerview__["a" /* AnswerviewPage */], icon: 'chatbubbles', active: false },
@@ -917,20 +992,9 @@ var MyApp = (function () {
             { title: "Barn", component: __WEBPACK_IMPORTED_MODULE_10__pages_kids_view_kids_view__["a" /* KidsViewPage */], icon: 'football', active: false },
             { title: 'Fritext', component: __WEBPACK_IMPORTED_MODULE_5__pages_write_own_text_write_own_text__["a" /* WriteOwnTextPage */], icon: 'brush', active: false }
         ];
-        this.activePage.subscribe(function (selectedPage) {
-            _this.pages.map(function (page) {
-                page.active = page.title === selectedPage.title;
-            });
-        });
-    }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.platform.ready().then(function () {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
-        });
+    };
+    MyApp.prototype.ngOnDestroy = function () {
+        this.activePageSubScriber.unsubscribe();
     };
     MyApp.prototype.openPage = function (page) {
         // Reset the content nav to have just this page
@@ -943,17 +1007,89 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/`<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="darker-green">\n      <ion-title>\n        <h3 class="angleHeader">\n          <ion-icon name="medkit"></ion-icon>&nbsp;Hospitality\n          <ion-icon name="pulse"></ion-icon>\n        </h3>\n      </ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-lines>\n      <button menuClose class="biggerButtonClass" [class.highlight]="p.active" ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name]="p.icon" item-left></ion-icon>\n        {{p.title}}\n      </button>\n      <hr id="settingMenuLine">\n    </ion-list>\n    <div class="settings">\n      <h4 id="settingsLabel">Inställningar</h4>\n      <ion-item>\n        <ion-label>Ljud</ion-label>\n        <ion-toggle checked="true" [(ngModel)]="soundOrNotVar" (click)="soundOrNot()"></ion-toggle>\n      </ion-item>\n    </div>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */]) === "function" && _e || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__translate_translate__ = __webpack_require__(285);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var PipesModule = (function () {
+    function PipesModule() {
+    }
+    PipesModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [__WEBPACK_IMPORTED_MODULE_1__translate_translate__["a" /* TranslatePipe */]],
+            imports: [],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__translate_translate__["a" /* TranslatePipe */]]
+        })
+    ], PipesModule);
+    return PipesModule;
+}());
+
+//# sourceMappingURL=pipes.module.js.map
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TranslatePipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_translations_translations__ = __webpack_require__(207);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TranslatePipe = (function () {
+    function TranslatePipe(translationService) {
+        this.translationService = translationService;
+    }
+    TranslatePipe.prototype.transform = function (value, args) {
+        return this.translationService.translate(value);
+    };
+    TranslatePipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["S" /* Pipe */])({
+            name: 'translate',
+            pure: false
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_translations_translations__["a" /* TranslationsProvider */]])
+    ], TranslatePipe);
+    return TranslatePipe;
+}());
+
+//# sourceMappingURL=translate.js.map
 
 /***/ }),
 
@@ -1139,5 +1275,5 @@ var WriteOwnTextPage = (function () {
 
 /***/ })
 
-},[207]);
+},[208]);
 //# sourceMappingURL=main.js.map
