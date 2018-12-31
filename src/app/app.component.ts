@@ -14,6 +14,8 @@ import { KidsViewPage } from '../pages/kids-view/kids-view';
 import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
 import { Subject } from 'rxjs/Subject';
 import { Subscription } from 'rxjs/Subscription';
+import { TranslationsProvider } from '../providers/translations/translations';
+import { Languages } from '../assets/enums/language';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,8 +28,12 @@ export class MyApp implements OnInit, OnDestroy {
   pages: Array<{title: string, component: any, icon: string, active: boolean}>;
   activePage = new Subject();
   activePageSubScriber: Subscription;
+  Languages = Languages;
+  public languageSelector = Languages;
+  
+  
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private SoundOrNotProvider: SoundOrNotProvider) {}
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private SoundOrNotProvider: SoundOrNotProvider, public translationProvider: TranslationsProvider) {}
   
   ngOnInit() {
     this.activePageSubScriber = this.activePage.subscribe((selectedPage: any) => {
@@ -66,5 +72,9 @@ export class MyApp implements OnInit, OnDestroy {
   soundOrNot()
   {
     this.SoundOrNotProvider.SetSoundOnOff(this.soundOrNotVar);
+  }
+
+  switchLanguage(language: Languages) {
+    this.translationProvider.switchLanguage(language);
   }
 }
