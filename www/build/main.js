@@ -34,18 +34,36 @@ var TranslationsProvider = (function () {
             'swe': {
                 language: 'swe',
                 values: {
+                    'ANSWER': 'Svar',
+                    'AUDIO': 'Ljud',
+                    'BODY': 'Kroppen',
                     'ENGLISH': 'Engelska',
+                    'FREE_TEXT': 'Fri text',
+                    'HOME': 'Hem',
+                    'KIDS': 'Barn',
                     'LANGUAGE': 'Språk',
+                    'NEEDS': 'Behov',
+                    'SETTINGS': 'Inställningar',
                     'SWEDISH': 'Svenska',
+                    'WANT_TO_KNOW': 'Vill veta',
                     'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'Med hjälp av denna sida kan du svara på frågor'
                 }
             },
             'eng': {
                 language: 'eng',
                 values: {
+                    'ANSWER': 'Answer',
+                    'AUDIO': 'Audio',
+                    'BODY': 'Body',
                     'ENGLISH': 'English',
+                    'FREE_TEXT': 'Free text',
+                    'HOME': 'Home',
+                    'KIDS': 'Kids',
                     'LANGUAGE': 'Language',
+                    'NEEDS': 'Needs',
+                    'SETTINGS': 'Settings',
                     'SWEDISH': 'Swedish',
+                    'WANT_TO_KNOW': 'Want to know',
                     'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'With the help of this page you can answer questions'
                 }
             }
@@ -1017,13 +1035,13 @@ var MyApp = (function () {
             _this.splashScreen.hide();
         });
         this.pages = [
-            { title: 'Hem', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home', active: true },
-            { title: 'Svara', component: __WEBPACK_IMPORTED_MODULE_7__pages_answerview_answerview__["a" /* AnswerviewPage */], icon: 'chatbubbles', active: false },
-            { title: 'Kroppen', component: __WEBPACK_IMPORTED_MODULE_6__pages_bodyview_bodyview__["a" /* BodyviewPage */], icon: 'clipboard', active: false },
-            { title: 'Behov', component: __WEBPACK_IMPORTED_MODULE_8__pages_need_view_need_view__["a" /* NeedViewPage */], icon: 'hand', active: false },
-            { title: 'Vill veta', component: __WEBPACK_IMPORTED_MODULE_9__pages_want_to_know_view_want_to_know_view__["a" /* WantToKnowViewPage */], icon: 'school', active: false },
-            { title: "Barn", component: __WEBPACK_IMPORTED_MODULE_10__pages_kids_view_kids_view__["a" /* KidsViewPage */], icon: 'football', active: false },
-            { title: 'Fritext', component: __WEBPACK_IMPORTED_MODULE_5__pages_write_own_text_write_own_text__["a" /* WriteOwnTextPage */], icon: 'brush', active: false }
+            { title: 'HOME', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */], icon: 'home', active: true },
+            { title: 'ANSWER', component: __WEBPACK_IMPORTED_MODULE_7__pages_answerview_answerview__["a" /* AnswerviewPage */], icon: 'chatbubbles', active: false },
+            { title: 'BODY', component: __WEBPACK_IMPORTED_MODULE_6__pages_bodyview_bodyview__["a" /* BodyviewPage */], icon: 'clipboard', active: false },
+            { title: 'NEEDS', component: __WEBPACK_IMPORTED_MODULE_8__pages_need_view_need_view__["a" /* NeedViewPage */], icon: 'hand', active: false },
+            { title: 'WANT_TO_KNOW', component: __WEBPACK_IMPORTED_MODULE_9__pages_want_to_know_view_want_to_know_view__["a" /* WantToKnowViewPage */], icon: 'school', active: false },
+            { title: "KIDS", component: __WEBPACK_IMPORTED_MODULE_10__pages_kids_view_kids_view__["a" /* KidsViewPage */], icon: 'football', active: false },
+            { title: 'FREE_TEXT', component: __WEBPACK_IMPORTED_MODULE_5__pages_write_own_text_write_own_text__["a" /* WriteOwnTextPage */], icon: 'brush', active: false }
         ];
     };
     MyApp.prototype.ngOnDestroy = function () {
@@ -1043,15 +1061,14 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/`<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="darker-green">\n      <ion-title>\n        <h3 class="angleHeader">\n          <ion-icon name="medkit"></ion-icon>&nbsp;Hospitality\n          <ion-icon name="pulse"></ion-icon>\n        </h3>\n      </ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-lines>\n      <button menuClose class="biggerButtonClass" [class.highlight]="p.active" ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name]="p.icon" item-left></ion-icon>\n        {{p.title}}\n      </button>\n      <hr id="settingMenuLine">\n    </ion-list>\n    <div class="settings">\n      <h4 id="settingsLabel">Inställningar</h4>\n      <ion-item>\n        <ion-label>Ljud</ion-label>\n        <ion-toggle checked="true" [(ngModel)]="soundOrNotVar" (click)="soundOrNot()"></ion-toggle>\n      </ion-item>\n      <ion-item>\n        <button ion-button (click)="switchLanguage(languageSelector.swe)">{{\'SWEDISH\' | translate}}</button>\n        <button ion-button (click)="switchLanguage(languageSelector.eng)">{{\'ENGLISH\' | translate}}</button>\n        <!--<ion-label>{{\'LANGUAGE\' | translate}}</ion-label>-->\n      </ion-item>\n    </div>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/`<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar color="darker-green">\n      <ion-title>\n        <h3 class="angleHeader">\n          <ion-icon name="medkit"></ion-icon>&nbsp;Hospitality\n          <ion-icon name="pulse"></ion-icon>\n        </h3>\n      </ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list no-lines>\n      <button menuClose class="biggerButtonClass" [class.highlight]="p.active" ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon [name]="p.icon" item-left></ion-icon>\n        {{p.title | translate}}\n      </button>\n      <hr id="settingMenuLine">\n    </ion-list>\n    <div class="settings">\n      <h4 id="settingsLabel">{{\'SETTINGS\' | translate}}</h4>\n      <ion-item>\n        <ion-label>{{\'AUDIO\' | translate}}</ion-label>\n        <ion-toggle checked="true" [(ngModel)]="soundOrNotVar" (click)="soundOrNot()"></ion-toggle>\n      </ion-item>\n      <h4 id="settingsLabel">{{\'LANGUAGE\' | translate}}</h4>  \n      <ion-item>\n        <button ion-button (click)="switchLanguage(languageSelector.swe)">{{\'SWEDISH\' | translate}}</button>\n        <button ion-button (click)="switchLanguage(languageSelector.eng)">{{\'ENGLISH\' | translate}}</button>\n      </ion-item>\n    </div>\n  </ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_13__providers_translations_translations__["a" /* TranslationsProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_13__providers_translations_translations__["a" /* TranslationsProvider */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_11__providers_sound_or_not_sound_or_not__["a" /* SoundOrNotProvider */], __WEBPACK_IMPORTED_MODULE_13__providers_translations_translations__["a" /* TranslationsProvider */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=app.component.js.map

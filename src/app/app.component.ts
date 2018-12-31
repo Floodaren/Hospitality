@@ -48,13 +48,13 @@ export class MyApp implements OnInit, OnDestroy {
     });
 
     this.pages = [
-      { title: 'Hem', component: HomePage, icon: 'home', active: true },
-      { title: 'Svara', component: AnswerviewPage, icon: 'chatbubbles', active: false },
-      { title: 'Kroppen', component: BodyviewPage, icon: 'clipboard', active: false },
-      { title: 'Behov', component: NeedViewPage, icon : 'hand', active: false},
-      { title: 'Vill veta', component: WantToKnowViewPage, icon: 'school', active: false},
-      { title: "Barn", component: KidsViewPage, icon: 'football', active: false },
-      { title: 'Fritext', component: WriteOwnTextPage, icon: 'brush', active: false }
+      { title: 'HOME', component: HomePage, icon: 'home', active: true },
+      { title: 'ANSWER', component: AnswerviewPage, icon: 'chatbubbles', active: false },
+      { title: 'BODY', component: BodyviewPage, icon: 'clipboard', active: false },
+      { title: 'NEEDS', component: NeedViewPage, icon : 'hand', active: false},
+      { title: 'WANT_TO_KNOW', component: WantToKnowViewPage, icon: 'school', active: false},
+      { title: "KIDS", component: KidsViewPage, icon: 'football', active: false },
+      { title: 'FREE_TEXT', component: WriteOwnTextPage, icon: 'brush', active: false }
     ];
   }
 

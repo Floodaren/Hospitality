@@ -16,18 +16,36 @@ export class TranslationsProvider {
         'swe' : {
             language: 'swe',
             values: {
+                'ANSWER' : 'Svar',
+                'AUDIO' : 'Ljud',
+                'BODY' : 'Kroppen',
                 'ENGLISH' : 'Engelska',
+                'FREE_TEXT' : 'Fri text',
+                'HOME' : 'Hem',
+                'KIDS' : 'Barn',
                 'LANGUAGE' : 'Språk',
+                'NEEDS' : 'Behov',
+                'SETTINGS' : 'Inställningar',
                 'SWEDISH' : 'Svenska',
+                'WANT_TO_KNOW' : 'Vill veta',
                 'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS' : 'Med hjälp av denna sida kan du svara på frågor'
             }
         },
         'eng' : {
             language: 'eng',
             values: {
+                'ANSWER' : 'Answer',
+                'AUDIO' : 'Audio',
+                'BODY' : 'Body',
                 'ENGLISH' : 'English',
+                'FREE_TEXT' : 'Free text',
+                'HOME' : 'Home',
+                'KIDS' : 'Kids',
                 'LANGUAGE' : 'Language',
+                'NEEDS' : 'Needs',
+                'SETTINGS' : 'Settings',
                 'SWEDISH' : 'Swedish',
+                'WANT_TO_KNOW' : 'Want to know',
                 'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS' : 'With the help of this page you can answer questions'
             }
         }
