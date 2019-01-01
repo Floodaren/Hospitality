@@ -37,16 +37,19 @@ var TranslationsProvider = (function () {
                     'ANSWER': 'Svar',
                     'AUDIO': 'Ljud',
                     'BODY': 'Kroppen',
+                    'COMMUNICATE_WHAT_YOU_WANT_TO_SAY_THROUGH_FREE_TEXT': 'Förmedla det du vill få sagt genom fritext',
                     'ENGLISH': 'Engelska',
                     'FREE_TEXT': 'Fri text',
                     'HOME': 'Hem',
                     'KIDS': 'Barn',
                     'LANGUAGE': 'Språk',
                     'NEEDS': 'Behov',
+                    'SEND': 'Skicka',
                     'SETTINGS': 'Inställningar',
                     'SWEDISH': 'Svenska',
                     'WANT_TO_KNOW': 'Vill veta',
-                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'Med hjälp av denna sida kan du svara på frågor'
+                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'Med hjälp av denna sida kan du svara på frågor',
+                    'WRITE_TEXT': 'Skriv text'
                 }
             },
             'eng': {
@@ -55,16 +58,19 @@ var TranslationsProvider = (function () {
                     'ANSWER': 'Answer',
                     'AUDIO': 'Audio',
                     'BODY': 'Body',
+                    'COMMUNICATE_WHAT_YOU_WANT_TO_SAY_THROUGH_FREE_TEXT': 'Communicate what you want to say through free text',
                     'ENGLISH': 'English',
                     'FREE_TEXT': 'Free text',
                     'HOME': 'Home',
                     'KIDS': 'Kids',
                     'LANGUAGE': 'Language',
                     'NEEDS': 'Needs',
+                    'SEND': 'Send',
                     'SETTINGS': 'Settings',
                     'SWEDISH': 'Swedish',
                     'WANT_TO_KNOW': 'Want to know',
-                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'With the help of this page you can answer questions'
+                    'WITH_THE_HELP_OF_THIS_PAGE_YOU_CAN_ANSWER_QUESTIONS': 'With the help of this page you can answer questions',
+                    'WRITE_TEXT': 'Write text'
                 }
             }
         };
@@ -674,11 +680,11 @@ var map = {
 		4
 	],
 	"../pages/pain-view/pain-view.module": [
-		291,
+		292,
 		3
 	],
 	"../pages/show-list-item/show-list-item.module": [
-		292,
+		291,
 		2
 	],
 	"../pages/want-to-know-view/want-to-know-view.module": [
@@ -924,8 +930,8 @@ var AppModule = (function () {
                         { loadChildren: '../pages/bodyview/bodyview.module#BodyviewPageModule', name: 'BodyviewPage', segment: 'bodyview', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/kids-view/kids-view.module#KidsViewPageModule', name: 'KidsViewPage', segment: 'kids-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/need-view/need-view.module#NeedViewPageModule', name: 'NeedViewPage', segment: 'need-view', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pain-view/pain-view.module#PainViewPageModule', name: 'PainViewPage', segment: 'pain-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/show-list-item/show-list-item.module#ShowListItemPageModule', name: 'ShowListItemPage', segment: 'show-list-item', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pain-view/pain-view.module#PainViewPageModule', name: 'PainViewPage', segment: 'pain-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/want-to-know-view/want-to-know-view.module#WantToKnowViewPageModule', name: 'WantToKnowViewPage', segment: 'want-to-know-view', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/write-own-text/write-own-text.module#WriteOwnTextPageModule', name: 'WriteOwnTextPage', segment: 'write-own-text', priority: 'low', defaultHistory: [] }
                     ]
@@ -1317,7 +1323,7 @@ var WriteOwnTextPage = (function () {
     };
     WriteOwnTextPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-write-own-text',template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/write-own-text/write-own-text.html"*/`<ion-header no-border>\n  <ion-navbar transparent padding>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      <span>Fritext</span>\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="this.callHelp()">\n        <span>\n          <ion-icon name="megaphone"></ion-icon>\n        </span>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="backgroundSetter">\n  <h1 class="infoText">Förmedla det du vill få sagt genom fritext</h1>\n  <hr class="whiteLine">\n  <ion-list *ngFor="let item of messageArray.slice().reverse()">\n    <div *ngIf="messageArray.length > 0">\n      <button ion-button icon-only (click)="deleteMessages(item)" class="emptyButton" color="danger">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </div>\n    <ion-item class="messageClass" text-wrap>\n      <h2 class="messageText">{{item}}</h2>\n    </ion-item>\n  </ion-list>\n  <ion-grid bottom>\n    <ion-row class="textInputAndSendButton">\n      <ion-col col-10>\n        <ion-item class="inputField">\n          <ion-input type="text" [(ngModel)]="messageToArray" placeholder="Skriv text..."></ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-2>\n        <button ion-button round (click)="this.sendMessage()" id="sendButton">Skicka</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/write-own-text/write-own-text.html"*/
+            selector: 'page-write-own-text',template:/*ion-inline-start:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/write-own-text/write-own-text.html"*/`<ion-header no-border>\n  <ion-navbar transparent padding>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n      <span>Fritext</span>\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="this.callHelp()">\n        <span>\n          <ion-icon name="megaphone"></ion-icon>\n        </span>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding class="backgroundSetter">\n  <h1 class="infoText">{{\'COMMUNICATE_WHAT_YOU_WANT_TO_SAY_THROUGH_FREE_TEXT\' | translate}}</h1>\n  <hr class="whiteLine">\n  <ion-list *ngFor="let item of messageArray.slice().reverse()">\n    <div *ngIf="messageArray.length > 0">\n      <button ion-button icon-only (click)="deleteMessages(item)" class="emptyButton" color="danger">\n        <ion-icon name="trash"></ion-icon>\n      </button>\n    </div>\n    <ion-item class="messageClass" text-wrap>\n      <h2 class="messageText">{{item}}</h2>\n    </ion-item>\n  </ion-list>\n  <ion-grid bottom>\n    <ion-row class="textInputAndSendButton">\n      <ion-col col-10>\n        <ion-item class="inputField">\n          <ion-input type="text" [(ngModel)]="messageToArray" placeholder="{{\'WRITE_TEXT\' | translate}}" (keydown.enter)="sendMessage()" autofocus></ion-input>\n        </ion-item>\n      </ion-col>\n      <ion-col col-2>\n        <button ion-button round (click)="sendMessage()" id="sendButton">{{\'SEND\' | translate}}</button>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>`/*ion-inline-end:"/Users/nicholasflod/Documents/Programmering/Hospitality/src/pages/write-own-text/write-own-text.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_alarm_sound_alarm_sound__["a" /* AlarmSoundProvider */]])
     ], WriteOwnTextPage);
