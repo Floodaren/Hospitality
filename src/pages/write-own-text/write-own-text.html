@@ -18,7 +18,7 @@
 
 
 <ion-content padding class="backgroundSetter">
-  <h1 class="infoText">Förmedla det du vill få sagt genom fritext</h1>
+  <h1 class="infoText">{{'COMMUNICATE_WHAT_YOU_WANT_TO_SAY_THROUGH_FREE_TEXT' | translate}}</h1>
   <hr class="whiteLine">
   <ion-list *ngFor="let item of messageArray.slice().reverse()">
     <div *ngIf="messageArray.length > 0">
@@ -34,11 +34,11 @@
     <ion-row class="textInputAndSendButton">
       <ion-col col-10>
         <ion-item class="inputField">
-          <ion-input type="text" [(ngModel)]="messageToArray" placeholder="Skriv text..."></ion-input>
+          <ion-input type="text" [(ngModel)]="messageToArray" placeholder="{{'WRITE_TEXT' | translate}}" (keydown.enter)="sendMessage()" autofocus></ion-input>
         </ion-item>
       </ion-col>
       <ion-col col-2>
-        <button ion-button round (click)="this.sendMessage()" id="sendButton">Skicka</button>
+        <button ion-button round (click)="sendMessage()" id="sendButton">{{'SEND' | translate}}</button>
       </ion-col>
     </ion-row>
   </ion-grid>
