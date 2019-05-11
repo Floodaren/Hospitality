@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnDestroy, OnInit } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,48 +13,53 @@ import { KidsViewPage } from '../pages/kids-view/kids-view';
 
 import { SoundOrNotProvider } from '../providers/sound-or-not/sound-or-not';
 import { Subject } from 'rxjs/Subject';
-
+import { Subscription } from 'rxjs/Subscription';
+import { TranslationsProvider } from '../providers/translations/translations';
+import { Languages } from '../assets/enums/language';
 
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class MyApp implements OnInit, OnDestroy {
   @ViewChild(Nav) nav: Nav;
 
   soundOrNotVar:boolean = true;
-  rootPage: any = HomePage;
+  rootPage = HomePage;
   pages: Array<{title: string, component: any, icon: string, active: boolean}>;
   activePage = new Subject();
+  activePageSubScriber: Subscription;
+  Languages = Languages;
+  public languageSelector = Languages;
+  
+  
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private SoundOrNotProvider: SoundOrNotProvider) {
-    this.initializeApp();
-
-    this.pages = [
-      { title: 'Hem', component: HomePage, icon: 'home', active: true },
-      { title: 'Svara', component: AnswerviewPage, icon: 'chatbubbles', active: false },
-      { title: 'Kroppen', component: BodyviewPage, icon: 'clipboard', active: false },
-      { title: 'Behov', component: NeedViewPage, icon : 'hand', active: false},
-      { title: 'Vill veta', component: WantToKnowViewPage, icon: 'school', active: false},
-      { title: "Barn", component: KidsViewPage, icon: 'football', active: false },
-      { title: 'Fritext', component: WriteOwnTextPage, icon: 'brush', active: false }
-    ];
-    
-    this.activePage.subscribe((selectedPage: any) => {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private SoundOrNotProvider: SoundOrNotProvider, public translationProvider: TranslationsProvider) {}
+  
+  ngOnInit() {
+    this.activePageSubScriber = this.activePage.subscribe((selectedPage: any) => {
       this.pages.map(page => {
         page.active = page.title === selectedPage.title;
       });
     });
 
-  }
-  
-
-  initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.pages = [
+      { title: 'HOME', component: HomePage, icon: 'home', active: true },
+      { title: 'ANSWER', component: AnswerviewPage, icon: 'chatbubbles', active: false },
+      { title: 'BODY', component: BodyviewPage, icon: 'clipboard', active: false },
+      { title: 'NEEDS', component: NeedViewPage, icon : 'hand', active: false},
+      { title: 'WANT_TO_KNOW', component: WantToKnowViewPage, icon: 'school', active: false},
+      { title: "KIDS", component: KidsViewPage, icon: 'football', active: false },
+      { title: 'FREE_TEXT', component: WriteOwnTextPage, icon: 'brush', active: false }
+    ];
+  }
+
+  ngOnDestroy() {
+    this.activePageSubScriber.unsubscribe();
   }
 
   openPage(page) {
@@ -67,5 +72,9 @@ export class MyApp {
   soundOrNot()
   {
     this.SoundOrNotProvider.SetSoundOnOff(this.soundOrNotVar);
+  }
+
+  switchLanguage(language: Languages) {
+    this.translationProvider.switchLanguage(language);
   }
 }
